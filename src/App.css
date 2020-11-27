@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #EA7773;
+    padding: 5rem 1rem 0rem 7rem;
+   
+}
+body::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+    display : inline-block;
+    margin: 0.9rem;
+}
+
+.card-container {
+    cursor: pointer;
+    background-color: whitesmoke;
+    padding: 1.5rem;
+    width: 20vw;
+    max-height: 45vh;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    transition: all 0.3s ease-in;
+}
+/* .card-container:hover{
+    background-color: aqua;
+    transform: scale(1.1);
+    transform-origin: center   
+} */
+.card-info {
+    
+    font-size: small;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+}
+.card-title {
+    font-size: larger;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5%;
+}
+.card-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: -50%;
+    
+}
+.editPic, .trashPic, .checkPic {
+    display: block;
+    height: 15px;
+    width: 15px;
+    transition: all 0.1s ease-in-out;
+    margin-bottom: 10px;
+}
+.trashPic {
+    margin-top:auto;
+    margin-bottom: 0;
+}
+.editPic:hover, .trashPic:hover, .checkPic:hover{
+    transform: scale(1.1);
+    transform-origin: center   
+}
+.navbar-container {
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+.addBtn {
+    position: absolute;
+    z-index: 89;
+    bottom: 50%;
+    width: fit-content;
+    border-radius: 50%;
+    background-color: #01CBC6;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transform: translate(40%, 50%);  
+    transition: all 0.5s ease-in; 
+}
+.input {
+    background: #2B2B52;
+    width: 30vw;
+    height: 100vh;
+    border-radius: 2%;
+    margin-left: -36vw;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transition: all 0.5s ease-in-out;
+}
+
+.show-input {
+    margin-left: -1vw;
+}
+.plus-cross{
+    position: absolute;
+    bottom: 6%;
+    transform: translate(40%, 50%) rotate(45deg);
+    background-color: #BA2F16;
+    
+}
+
+  input[type=submit] {
+    background: #fff;
+    height: 2.75rem;
+    margin: 1em auto auto;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  input[type=text] {
+    height: 1.5rem;
+    margin: 0 0 1.15rem;
+    width: 100%;
+  }
+  form {
+    overflow: hidden;
+    padding: 10%;
+    position: relative;
+    width: 100%;
+  }
+  input[type=text]{
+    background: #2B2B52;
+    border: none;
+    border-bottom: 2px solid #74bdb7;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  input[type=submit] {
+    background: #f37b56;
+    border: none;
+    color: #fff;
+    padding: 0 2rem;
+    width: 100%;
+  }
+  
+  input[type=submit]:hover,
+  input[type=submit]:focus {
+    background: #f79577;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .text-small-uppercase {
+    color: #74bdb7;
+    font: 700 .75rem 'Montserrat';
+    letter-spacing: .08rem;
+    text-transform: uppercase;
+  }
+.text-body {
   color: white;
+  font: 700 16px 'Montserrat', sans-serif;
+  background-color: #2B2B52;
+  border: 2px solid #74bdb7;
+  outline: none;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+textarea {
+    width: 100%;
+    resize: none;
   }
-  to {
-    transform: rotate(360deg);
-  }
+.heading{
+    color: white;
+    padding-left:15%;
+    padding-top: 5%;
 }
